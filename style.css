@@ -1,0 +1,45 @@
+/* style.css - Gère le design de tout le site */
+
+/* On définit le style général de la page */
+body {
+    background-color: white; /* Fond blanc */
+    color: black; /* Texte en noir */
+    font-family: Arial, sans-serif; /* Police d'écriture propre */
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* Centre le texte globalement */
+}
+
+/* Le conteneur principal pour faire joli */
+.container {
+    margin-top: 100px; /* Laisse de l'espace en haut de l'écran */
+}
+
+/* Le style des boutons (onglets) */
+.bouton {
+    display: inline-block; /* Permet aux boutons d'être côte à côte */
+    background-color: #f0f0f0; /* Fond gris clair pour le bouton */
+    color: black; /* Texte noir */
+    padding: 15px 30px; /* Espace à l'intérieur du bouton */
+    margin: 10px; /* Espace entre les boutons */
+    text-decoration: none; /* Enlève le souligné des liens */
+    border: 2px solid black; /* Bordure noire */
+    border-radius: 5px; /* Arrondit les angles */
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    transition: 0.3s; /* Animation douce quand on passe la souris */
+}
+
+/* Effet quand on passe la souris sur le bouton */
+.bouton:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Style spécifique pour la visionneuse de PDF */
+.pdf-viewer {
+    width: 80%; /* Prend 80% de la largeur de l'écran */
+    height: 600px; /* Hauteur de la visionneuse */
+    margin: 20px auto; /* Centre la visionneuse */
+    border: 2px solid #ccc;
+}
