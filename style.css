@@ -43,3 +43,18 @@ body {
     margin: 20px auto; /* Centre la visionneuse */
     border: 2px solid #ccc;
 }
+
+/* Conteneur pour aligner les éléments horizontalement */
+.flex-container {
+    display: flex;
+    justify-content: center; /* Centre les éléments */
+    gap: 50px;              /* Espace entre les deux colonnes */
+    margin-top: 20px;
+}
+
+/* Chaque colonne (texte + bouton) */
+.flex-item {
+    display: flex;
+    flex-direction: column; /* Aligne le texte au-dessus du bouton */
+    align-items: center;    /* Centre le contenu de la colonne */
+}
