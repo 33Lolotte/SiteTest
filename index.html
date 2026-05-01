@@ -12,26 +12,22 @@
         
         <br> 
         <!-- On remplace le lien direct par un appel à une fonction JavaScript -->
-        <a href="mathsSup.html" class="bouton">Maths Sup</a>
-    <a href="javascript:void(0);" onclick="verifierMotDePasse()" class="bouton">Mathématiques</a>
+        <a href="javascript:void(0);" onclick="verifierMotDePasse('Morlot', 'mathsSup.html')" class="bouton">Maths Sup</a>
+        <a href="javascript:void(0);" onclick="verifierMotDePasse('Moulin', 'maths.html')" class="bouton">Maths Spé</a>
 
     <script>
-        function verifierMotDePasse() {
-            // Tu peux changer le texte de la question ici
-            var motDePasseAttendu = "Moulin"; 
-            var saisie = prompt("Accès restreint : Veuillez entrer le nom de famille du 'vieux con' pour voir les cours d'Eliott :");
+function verifierMotDePasse(motDePasseAttendu, pageCible) {
+    var saisie = prompt("Accès restreint : Veuillez entrer le mot de passe pour accéder à cette section :");
 
-            if (saisie === motDePasseAttendu) {
-            // Si c'est bon, on dirige vers la page
-            window.location.href = "maths.html";
-            } else if (saisie != null) {
-        // Si c'est faux (et que l'utilisateur n'a pas cliqué sur 'Annuler')
+    if (saisie === motDePasseAttendu) {
+        window.location.href = pageCible;
+    } else if (saisie != null) {
         alert("Mot de passe incorrect. Accès refusé.");
-            }
-            }
-        </script>
-        <a href="temp.html" class="bouton">Temporaire</a>
-        <a href="physique.html" class="bouton">Physique-chimie</a>
+    }
+}
+</script>
+        <a href="javascript:void(0);" onclick="verifierMotDePasse('Colles', 'temp.html')" class="bouton">Temporaire</a>
+        <a href="javascript:void(0);" onclick="verifierMotDePasse('Vandecasteele', 'physique.html')" class="bouton">Physique-chimie</a>
     </div>
 </body>
 </html>
