@@ -10,7 +10,25 @@
     <div class="container">
         <h1>Bienvenue sur le site d'Eliott PERRIERE--LARRAUX</h1>
         
-        <br> <a href="maths.html" class="bouton">Mathématiques</a>
+        <br> 
+        <!-- On remplace le lien direct par un appel à une fonction JavaScript -->
+    <a href="javascript:void(0);" onclick="verifierMotDePasse()" class="bouton">Mathématiques</a>
+
+    <script>
+        function verifierMotDePasse() {
+            // Tu peux changer le texte de la question ici
+            var motDePasseAttendu = "Moulin"; 
+            var saisie = prompt("Accès restreint : Veuillez entrer le nom de famille du 'vieux con' pour voir les cours d'Eliott :");
+
+            if (saisie === motDePasseAttendu) {
+            // Si c'est bon, on dirige vers la page
+            window.location.href = "maths.html";
+            } else if (saisie != null) {
+        // Si c'est faux (et que l'utilisateur n'a pas cliqué sur 'Annuler')
+        alert("Mot de passe incorrect. Accès refusé.");
+            }
+            }
+        </script>
         <a href="physique.html" class="bouton">Physique-chimie</a>
     </div>
 </body>
